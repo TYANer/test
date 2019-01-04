@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example for three column layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      position: relative;
+      height: 100vh;
+    }
+    header {
+      height: 60px;
+      position: relative;
+      width: 100vw;
+      /* background: #1c2128; */
+      /* z-index: 100; */
+      /* background: #111; */
+    }
+    .sidebar {
+      padding: 0;
+      margin: 0;
+      width: 210px;
+      position: absolute;
+      top: 60px;
+      bottom: 0;
+      left: 0;
+      overflow: auto;
+      /* border-right: 1px solid #2d333b; */
+      /* background: #20262e; */
+      /* display: flex; */
+      /* flex-direction: column; */
+      /* z-index: 20; */
+      /* color: #cfd0d2; */
+      /* box-shadow: 0 0 0 rgba(0, 0, 0, .5); */
+      /* background: #222; */
+    }
+    .content {
+      position: relative;
+      margin-left: 210px;
+      height: calc(100vh - 60px);
+    }
+    .left,
+    .right {
+      position: relative;
+      overflow: auto;
+      float: left;
+      height: 100%;
+    }
+    .left {
+      width: calc(100% - 300px);
+      /* background: #333; */
+    }
+    .right {
+      width: 300px;
+      /* background: #444; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      三列可以分开滚动，互不影响；头部不会随着页面滚动而滚动
+    </header>
+    <div class="sidebar">
+      sidebar
+
+      - 添加参数校验（不能为空，path格式）
+      - +请求时间
+      - 给请求码添加颜色区分
+      - 主要部分（body、URL、请求方式）、次要（请求头、响应头）
+      - 添加参数校验（不能为空，path格式）
+      - +请求时间
+      - 给请求码添加颜色区分
+      - 主要部分（body、URL、请求方式）、次要（请求头、响应头）
+      - 添加参数校验（不能为空，path格式）
+      - +请求时间
+      - 给请求码添加颜色区分
+      - 主要部分（body、URL、请求方式）、次要（请求头、响应头）
+      - 添加参数校验（不能为空，path格式）
+      - +请求时间
+      - 给请求码添加颜色区分
+      - 主要部分（body、URL、请求方式）、次要（请求头、响应头）
+      - 添加参数校验（不能为空，path格式）
+      - +请求时间
+      - 给请求码添加颜色区分
+      - 主要部分（body、URL、请求方式）、次要（请求头、响应头）
+    </div>
+    <div class="content">
+      <div class="left">1、环境、服务、游戏、用户类型能否缺省选择好（选哪一个大家讨论下）
+        2、请求URL那个地方应该不是URL，只是一个API路径，可能更确切。
+        3、这些选中的值，能否在选中时存Cookie/Local Storage中，刷新页面甚至下次打开自动回复
+        4、请求结果那个地方不太易懂，似乎直接把xhr堆上去的，建议分header、response什么的，甚至支持自动折叠。比如缺省只展开了response，header是折叠的
+        5、LOGO可以用这个图：https://wiki.tap4fun.com/download/attachments/10060969/TGS?version=1&modificationDate=1531465562000&api=v2
+        6、sauth这个scope是拼写错误，可以去掉*
+        7、请求方法里，GET/POST/DELETE/PUT就够了，其他的不需要*
+        8、添加参数的按钮建议不要和路径结合在一起，而是新行、文本按钮。参数建议可以弄个table套起来
+
+        ### bug
+        BUG1、点发送请求后，按钮灰色未自动恢复，需要空白处点一下*
+        element UI样式覆盖
+        BUG2、dev环境、chat服务、G301游戏、auth验证、用户名类型为空，用户名密码为pf、没有任何scope。点了之后，就一个请求结果，再点没变化
+        修改：
+
+        - 添加参数校验（不能为空，path格式）
+        - +请求时间
+        - 给请求码添加颜色区分
+        - 主要部分（body、URL、请求方式）、次要（请求头、响应头）
+
+        1、环境、服务、游戏、用户类型能否缺省选择好（选哪一个大家讨论下）
+        2、请求URL那个地方应该不是URL，只是一个API路径，可能更确切。
+        3、这些选中的值，能否在选中时存Cookie/Local Storage中，刷新页面甚至下次打开自动回复
+        4、请求结果那个地方不太易懂，似乎直接把xhr堆上去的，建议分header、response什么的，甚至支持自动折叠。比如缺省只展开了response，header是折叠的
+        5、LOGO可以用这个图：https://wiki.tap4fun.com/download/attachments/10060969/TGS?version=1&modificationDate=1531465562000&api=v2
+        6、sauth这个scope是拼写错误，可以去掉*
+        7、请求方法里，GET/POST/DELETE/PUT就够了，其他的不需要*
+        8、添加参数的按钮建议不要和路径结合在一起，而是新行、文本按钮。参数建议可以弄个table套起来
+
+        ### bug
+        BUG1、点发送请求后，按钮灰色未自动恢复，需要空白处点一下*
+        element UI样式覆盖
+        BUG2、dev环境、chat服务、G301游戏、auth验证、用户名类型为空，用户名密码为pf、没有任何scope。点了之后，就一个请求结果，再点没变化
+        修改：
+
+        - 添加参数校验（不能为空，path格式）
+        - +请求时间
+        - 给请求码添加颜色区分
+        - 主要部分（body、URL、请求方式）、次要（请求头、响应头
+      </div>
+      <div class="right">1、环境、服务、游戏、用户类型能否缺省选择好（选哪一个大家讨论下）
+        2、请求URL那个地方应该不是URL，只是一个API路径，可能更确切。
+        3、这些选中的值，能否在选中时存Cookie/Local Storage中，刷新页面甚至下次打开自动回复
+        4、请求结果那个地方不太易懂，似乎直接把xhr堆上去的，建议分header、response什么的，甚至支持自动折叠。比如缺省只展开了response，header是折叠的
+        5、LOGO可以用这个图：https://wiki.tap4fun.com/download/attachments/10060969/TGS?version=1&modificationDate=1531465562000&api=v2
+        6、sauth这个scope是拼写错误，可以去掉*
+        7、请求方法里，GET/POST/DELETE/PUT就够了，其他的不需要*
+        8、添加参数的按钮建议不要和路径结合在一起，而是新行、文本按钮。参数建议可以弄个table套起来
+
+        ### bug
+        BUG1、点发送请求后，按钮灰色未自动恢复，需要空白处点一下*
+        element UI样式覆盖
+        BUG2、dev环境、chat服务、G301游戏、auth验证、用户名类型为空，用户名密码为pf、没有任何scope。点了之后，就一个请求结果，再点没变化
+        修改：
+
+        - 添加参数校验（不能为空，path格式）
+        - +请求时间
+        - 给请求码添加颜色区分
+        - 主要部分（body、URL、请求方式）、次要（请求头、响应头）
+
+
+
+
+
+        1、环境、服务、游戏、用户类型能否缺省选择好（选哪一个大家讨论下）
+        2、请求URL那个地方应该不是URL，只是一个API路径，可能更确切。
+        3、这些选中的值，能否在选中时存Cookie/Local Storage中，刷新页面甚至下次打开自动回复
+        4、请求结果那个地方不太易懂，似乎直接把xhr堆上去的，建议分header、response什么的，甚至支持自动折叠。比如缺省只展开了response，header是折叠的
+        5、LOGO可以用这个图：https://wiki.tap4fun.com/download/attachments/10060969/TGS?version=1&modificationDate=1531465562000&api=v2
+        6、sauth这个scope是拼写错误，可以去掉*
+        7、请求方法里，GET/POST/DELETE/PUT就够了，其他的不需要*
+        8、添加参数的按钮建议不要和路径结合在一起，而是新行、文本按钮。参数建议可以弄个table套起来
+
+        ### bug
+        BUG1、点发送请求后，按钮灰色未自动恢复，需要空白处点一下*
+        element UI样式覆盖
+        BUG2、dev环境、chat服务、G301游戏、auth验证、用户名类型为空，用户名密码为pf、没有任何scope。点了之后，就一个请求结果，再点没变化
+        修改：
+
+        - 添加参数校验（不能为空，path格式）
+        - +请求时间
+        - 给请求码添加颜色区分
+        - 主要部分（body、URL、请求方式）、次要（请求头、响应头）
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
